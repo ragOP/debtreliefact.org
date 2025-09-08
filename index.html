@@ -141,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     Checking your eligibility is very simple and takes just 60 seconds, simply answer the questions below to see if you qualify now.
                     <br /><br />
                 </div>
-                <div style="margin-bottom: 20px; margin-top: -10px;"><i style="font-size: 24px;" class="fa-solid fa-angle-down"></i></div>
+                <div style="margin-bottom: 20px; margin-top: -10px;"><i style="font-size: 24px;" class="fa-solid fa-angle-down animate-float-slow"></i></div>
                 <div style="background-color: #f1f1f1; height: 60px;" class="paddu">
                     <div 
                     class="paddu"
@@ -183,7 +183,7 @@ border-radius: 0px 0px 10px 10px;
             </div>
             <div class="spots-count">Spots remaining: 4</div>
             <!-- <div class="tap-direction">👇 TAP BELOW TO CALL 👇</div> -->
-            <div class="call-btn" onclick="handleCall()">
+            <div class="call-btn call-btn--shimmer" onclick="handleCall()">
                 <a href="tel:+18333402442">
                     <div className="call-btn" onClick={handleCall}> CALL (321) 485-8035
                     </div>
@@ -204,7 +204,7 @@ border-radius: 0px 0px 10px 10px;
             </div>
         </div>
 
-        <div class="footer2" style="margin-top: 25vh;">
+        <div class="footer2" style="margin-top: 75vh;">
             Beware of other fraudulent & similar-looking websites that might look exactly like ours, we have no affiliation with them. This is the only official website to claim your Debt Relief with the domain name debtreliefact.org.
         
             <div class="terms2">
@@ -339,6 +339,7 @@ border-radius: 0px 0px 10px 10px;
             congratulationsDiv.classList.remove("hidden");
             imageContainer.style.display = 'block';
             startTimer();
+            // Apply motion-in animation to buttons with stagger
             setTimeout(() => {
                 imageContainer.style.display = 'none';
             }, 2000)

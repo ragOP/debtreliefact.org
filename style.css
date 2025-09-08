@@ -874,3 +874,77 @@ a{
   animation: glow 1.5s infinite alternate;
  
   }
+ 
+ /* Smooth up-down animation for icons/arrows */
+ @keyframes floatYSlow {
+   0% {
+     transform: translateY(0);
+   }
+   50% {
+     transform: translateY(8px);
+   }
+   100% {
+     transform: translateY(0);
+   }
+ }
+ .animate-float-slow {
+   animation: floatYSlow 2.8s ease-in-out infinite;
+   display: inline-block;
+ }
+
+/* Motion-like button effects (hover/tap/enter) */
+.answer-btn-5,
+.call-btn {
+  transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              background-color 200ms ease;
+  will-change: transform;
+}
+
+.answer-btn-5:hover,
+.call-btn:hover {
+  transform: scale(1.03);
+}
+
+.answer-btn-5:active,
+.call-btn:active {
+  transform: scale(0.97);
+}
+
+@keyframes motionIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Shimmer effect (scoped) */
+.call-btn.call-btn--shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.call-btn.call-btn--shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  animation: shimmer 2.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
