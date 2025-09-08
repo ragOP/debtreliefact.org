@@ -112,7 +112,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px; /* Fixed height */
+    height: 60px; /* Fixed height */
     width: 100%; /* You can set a fixed width or use a percentage */
     // background: linear-gradient(to left, #000000, #003F89, #003F67);
     color: rgb(255, 255, 255);
