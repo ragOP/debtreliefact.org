@@ -256,7 +256,12 @@ border-radius: 0px 0px 10px 10px;
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
                 smoothScrollToTop(1000, 432);
-            } else {
+            } else if (quizQuestion === "2. Are you over $15k in Debt?") {
+                quizQuestion = "3. What Type Of Debt You Have?";
+                quizText.textContent = quizQuestion;
+                setYesNoOptionsForThree();
+                smoothScrollToTop(1000, 832);
+            }else {
                 stepProcess("yes");
             }
         }
@@ -267,15 +272,29 @@ border-radius: 0px 0px 10px 10px;
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
                 smoothScrollToTop(1000, 632);
-            } else {
+            } else if (quizQuestion === "2. Are you over $15k in Debt?") {
+                quizQuestion = "3. What Type Of Debt You Have?";
+                quizText.textContent = quizQuestion;
+                setYesNoOptionsForThree();
+                smoothScrollToTop(1000, 832);
+            }
+            else {
                 stepProcess("no");
             }
         }
 
         function setYesNoOptions() {
             answerOptions.innerHTML = `
-                <div style="border-radius: 20px; font-size: 22px;" class="answer-btn-5" onclick="stepProcess('yes')">YES</div>
-                <div style="border-radius: 20px; font-size: 22px;" class="answer-btn-5" onclick="stepProcess('no')">NO</div>
+                <div style="border-radius: 20px; font-size: 22px;" class="answer-btn-5" onclick="handleQuizP()">YES</div>
+                <div style="border-radius: 20px; font-size: 22px;" class="answer-btn-5" onclick="handleQuizN()">NO</div>
+            `;
+        }
+
+        function setYesNoOptionsForThree() {
+            answerOptions.innerHTML = `
+                <div style="border-radius: 20px; font-size: 22px;" class="answer-btn-5" onclick="stepProcess('yes')">Credit Card</div>
+                <div style="border-radius: 20px; font-size: 22px;" class="answer-btn-5" onclick="stepProcess('no')">Personal Loans</div>
+                <div style="border-radius: 20px; font-size: 22px;" class="answer-btn-5" onclick="stepProcess('no')">Both</div>
             `;
         }
 
