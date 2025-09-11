@@ -17,6 +17,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-M9NLWF5P');</script>
 <!-- End Google Tag Manager -->
  <script src=//b-js.ringba.com/CAb1898583c6bd4320aec32055d98fc238 async></script>
+ <!-- Start NB Pixel Snippet -->
+<script>
+!(function (e, n, t, i, p, a, s) {
+  e[i] ||
+    (((p = e[i] =
+      function () {
+        p.process ? p.process.apply(p, arguments) : p.queue.push(arguments);
+      }).queue = []),
+    (p.t = +new Date()),
+    ((a = n.createElement(t)).async = 1),
+    (a.src = 'https://static.newsbreak.com/business/tracking/nbpixel.js?t=' + 864e5 * Math.ceil(new Date() / 864e5)),
+    (s = n.getElementsByTagName(t)[0]).parentNode.insertBefore(a, s));
+})(window, document, 'script', 'nbpix'),
+  nbpix('init', 'ID-1819386560855523330'),
+  nbpix('event', 'pageload');
+</script>
+<!-- End NB Pixel Snippet -->
 <style>
     @media (min-width: 769px) {
         .magic {
@@ -183,9 +200,9 @@ border-radius: 0px 0px 10px 10px;
             </div>
             <div class="spots-count">Spots remaining: 4</div>
             <!-- <div class="tap-direction">👇 TAP BELOW TO CALL 👇</div> -->
-            <div class="call-btn call-btn--shimmer" onclick="handleCall()">
-                <a href="tel:+18333402442">
-                    <div className="call-btn" onClick={handleCall}> CALL (321) 485-8035
+            <div class="call-btn call-btn--shimmer">
+                <a href="tel:+18333402442" onclick="handleCall()">
+                    <div className="call-btn"> CALL (321) 485-8035
                     </div>
                 </a>
             </div>
@@ -383,7 +400,11 @@ border-radius: 0px 0px 10px 10px;
         }
 
         function handleCall() {
-            // Add any additional functionality for handling the call
+        // Add any additional functionality for handling the call
+      nbpix("event", "raw_call");
+
+    // Add any additional functionality for handling the call
+    console.log("handleCall triggered");
         }
     </script>
  </div>
