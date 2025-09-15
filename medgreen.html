@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Debt Relief Act Org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { 
+      margin:0; 
+      font-family:"Times New Roman", serif; 
+      background:#f9f9f9 url('back.png') no-repeat center center fixed; 
+      background-size:cover; 
+      color:#111; 
+      padding:40px; 
+    }
+    .notice {
+      max-width:800px; margin:auto; 
+      background:#fff;
+       padding:20px;
+      border:2px solid #000; box-shadow:0 4px 16px rgba(0,0,0,.15);
+    }
+    .header { display:flex; justify-content:left; align-items:center; margin-bottom:20px; position:relative; }
+    .seal { font-weight:900; font-size:12px; text-align:center; }
+    .date { position:absolute; right:0; top:7px; transform:translateY(-50%); font-size:9px; text-align:right; }
+    .title { text-align:center; font-size:22px; font-weight:700; margin:20px 0; text-transform:uppercase; }
+    .body p { font-size:16px; line-height:1.6; margin:14px 0; }
+    .highlight { font-weight:700; color:#b22222; }
+    .cta {
+      display:block; width:100%; margin:0px 0; text-align:center;
+      background:#e90d0d; color:#fff; font-size:18px; font-weight:700; padding:24px;
+      position:relative; overflow:hidden;
+       text-decoration:none; border:2px solid #dd0f0f;
+    border-radius:8px; box-sizing:border-box;
+    max-width:100%; min-width:180px;
+    transition:background 0.2s;
+    width:320px; margin:24px auto; display:block;
+    }
+    /* Shimmer effect aligned with index page */
+    .cta.call-btn--shimmer { position: relative; overflow: hidden; }
+    .cta.call-btn--shimmer::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+      transform: skewX(-20deg);
+      pointer-events: none;
+      animation: shimmer 2.2s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0% { left: -150%; }
+      100% { left: 150%; }
+    }
+   
+    
+    .cta:hover { background:#333; }
+    .exp { font-size:16px; font-weight:700; color:#b22222; margin-top:10px; text-align:center; }
+    .footer {
+      margin-top:40px; font-size:13px; color:#333; border-top:1px solid #ccc; padding-top:12px;
+    }
+  </style>
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M9NLWF5P');</script>
+<!-- End Google Tag Manager -->
+<script src=//b-js.ringba.com/CAb1898583c6bd4320aec32055d98fc238 async></script>
+</head>
+<body>
+     <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9NLWF5P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="notice">
+    <div class="header">
+      <div class="seal">⚖ DEBT RELIEF ACT</div>
+    <div class="date">DATE-<b><script>document.write(new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }));</script></b></div>
+    </div>
+
+    <div class="title">Notice of Eligibility</div>
+
+    <div class="body">
+      <p>Dear Citizen,</p>
+      <p>You may be entitled to a receive 100% debt relief on your credit card debt of over <span class="highlight">$15,000.</span></p>
+      <!-- <p>You may be entitled to receive a <span class="highlight">$25,000 Funeral Benefit</span> to cover final expenses. This benefit has been authorized for distribution to qualified seniors nationwide.</p> -->
+      <p>This benefit has been authorized for distribution to qualified Americans nationwide.</p>
+<p>Our records indicate that you may be eligible. To confirm, please complete a short verification process immediately.</p>
+      <p><b>Action Required:</b> Contact a licensed agent before your reservation expires. Failure to act before the expiration date may result in forfeiture of benefits.</p>
+
+      <a href="tel:+18333402442" class="cta call-btn--shimmer"> CALL NOW TO CLAIM</a>
+      <div class="exp">⚠ Reservation Expires in: 4 Minutes</div>
+
+      <p>By contacting the number above, you will be connected with a licensed representative who can confirm your details and qualify you for immediate debt relief help!</p>
+    </div>
+
+    <div class="footer">
+      This document is an official eligibility notice. Distribution is limited.  
+      © 2025 DEBT RELIEF ACT. All Rights Reserved.
+    </div>
+  </div>
+
+  <script>
+    let remaining=240; const exp=document.querySelector('.exp');
+    setInterval(()=>{
+      remaining=Math.max(0,remaining-1);
+      const m=Math.floor(remaining/60), s=remaining%60;
+      exp.textContent="⚠ Reservation Expires in: "+m+":"+String(s).padStart(2,"0");
+      if(!remaining) exp.textContent="❌ Reservation Expired";
+    },1000);
+  </script>
+</body>
+</html>
